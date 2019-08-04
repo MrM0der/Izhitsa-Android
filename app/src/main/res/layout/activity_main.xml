@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:context=".ui.MainActivity">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_text"/>
+
+        <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/install_text"/>
+
+        <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info_text"/>
+
+        <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <Button android:id="@+id/rateButton"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="@string/rate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/shareButton"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="@string/share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/otherAppsButton"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="@string/other_apps_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/translatorButton"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="@string/translator_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/donateButton"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:text="@string/donate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/copyright"/>
+    </LinearLayout>
+
+</ScrollView>
