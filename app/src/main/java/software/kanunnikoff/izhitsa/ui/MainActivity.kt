@@ -54,10 +54,10 @@ class MainActivity : AppCompatActivity(), AnkoLogger, BillingProvider {
             Answers.getInstance().logCustom(CustomEvent("Developer's page visited."))
         }
 
-        findViewById<Button>(R.id.translatorButton).setOnClickListener {
-            browse("https://play.google.com/store/apps/details?id=software.kanunnikoff.yat")
-            Answers.getInstance().logCustom(CustomEvent("Yat's page visited."))
-        }
+//        findViewById<Button>(R.id.translatorButton).setOnClickListener {
+//            browse("https://play.google.com/store/apps/details?id=software.kanunnikoff.yat")
+//            Answers.getInstance().logCustom(CustomEvent("Yat's page visited."))
+//        }
 
         findViewById<Button>(R.id.donateButton).setOnClickListener {
             if (!Core.isPremiumPurchased) {
