@@ -35,39 +35,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <Button android:id="@+id/rateButton"
+            <Button android:id="@+id/menuButton"
                     android:backgroundTint="@color/colorPrimary"
                     android:textColor="@android:color/white"
-                    android:text="@string/rate_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            <Button android:id="@+id/shareButton"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:textColor="@android:color/white"
-                    android:text="@string/share_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            <Button android:id="@+id/otherAppsButton"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:textColor="@android:color/white"
-                    android:text="@string/other_apps_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            <!--<Button android:id="@+id/translatorButton"-->
-                    <!--android:backgroundTint="@color/colorPrimary"-->
-                    <!--android:textColor="@android:color/white"-->
-                    <!--android:text="@string/translator_button"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"/>-->
-
-            <Button android:id="@+id/donateButton"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:textColor="@android:color/white"
-                    android:text="@string/donate_button"
-                    android:layout_width="wrap_content"
+                    android:text="@string/menu_button"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
         </LinearLayout>

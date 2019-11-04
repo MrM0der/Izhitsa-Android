@@ -8,7 +8,7 @@
           android:keyBackground="@color/keyBackground">
 
     <Row>
-        <Key android:codes="1123" android:keyLabel="ѣ" android:keyEdgeFlags="left"/>
+        <Key android:codes="1092" android:keyLabel="ф" android:keyEdgeFlags="left"/>
         <Key android:codes="1139" android:keyLabel="ѳ" android:keyEdgeFlags="right"/>
     </Row>
 </Keyboard>

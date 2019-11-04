@@ -8,7 +8,6 @@ import android.os.Build
 import android.text.TextUtils
 import android.view.KeyEvent
 import android.view.View
-import android.view.inputmethod.InputConnection
 import android.view.inputmethod.InputMethodManager
 
 class MyInputMethodService : InputMethodService(), KeyboardView.OnKeyboardActionListener {
@@ -19,7 +18,7 @@ class MyInputMethodService : InputMethodService(), KeyboardView.OnKeyboardAction
 
     override fun onCreateInputView(): View? {
         keyboardView = layoutInflater.inflate(R.layout.keyboard_view, null) as KeyboardView
-        keyboard = Keyboard(this, R.xml.keys_layout)
+        keyboard = Keyboard(this, R.xml.russian_keys_layout)
         keyboardView?.keyboard = keyboard
         keyboardView?.setOnKeyboardActionListener(this)
         keyboardView?.isPreviewEnabled = false

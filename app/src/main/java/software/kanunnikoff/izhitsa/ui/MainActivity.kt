@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.annotation.UiThread
-import com.android.billingclient.api.BillingClient
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.answers.*
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -17,13 +16,12 @@ import software.kanunnikoff.izhitsa.Core.PRICE
 import software.kanunnikoff.izhitsa.Core.USD
 import software.kanunnikoff.izhitsa.R
 import software.kanunnikoff.izhitsa.billing.BillingManager
-import software.kanunnikoff.izhitsa.billing.BillingManager.BILLING_MANAGER_NOT_INITIALIZED
 import software.kanunnikoff.izhitsa.billing.BillingProvider
 import software.kanunnikoff.izhitsa.billing.MainViewController
 import software.kanunnikoff.izhitsa.percentOf
 
 class MainActivity : AppCompatActivity(), AnkoLogger, BillingProvider {
-    private var billingManager: BillingManager? = null
+    var billingManager: BillingManager? = null
     private var viewController: MainViewController? = null
     private var firebaseAnalytics: FirebaseAnalytics? = null
 
@@ -31,50 +29,8 @@ class MainActivity : AppCompatActivity(), AnkoLogger, BillingProvider {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.rateButton).setOnClickListener {
-            browse("https://play.google.com/store/apps/details?id=$packageName")
-            Answers.getInstance().logRating(
-                RatingEvent()
-                    .putContentName("Rating of the app in Google Play.")
-                    .putContentType("app")
-                    .putContentId(packageName))
-        }
-
-        findViewById<Button>(R.id.shareButton).setOnClickListener {
-            share("Google Play: https://play.google.com/store/apps/details?id=$packageName", getString(R.string.app_name))
-            Answers.getInstance().logShare(
-                ShareEvent()
-                    .putContentName("Link to the app in Google Play.")
-                    .putContentType("link")
-                    .putContentId(packageName))
-        }
-
-        findViewById<Button>(R.id.otherAppsButton).setOnClickListener {
-            browse("https://play.google.com/store/apps/dev?id=9118553902079488918")
-            Answers.getInstance().logCustom(CustomEvent("Developer's page visited."))
-        }
-
-//        findViewById<Button>(R.id.translatorButton).setOnClickListener {
-//            browse("https://play.google.com/store/apps/details?id=software.kanunnikoff.yat")
-//            Answers.getInstance().logCustom(CustomEvent("Yat's page visited."))
-//        }
-
-        findViewById<Button>(R.id.donateButton).setOnClickListener {
-            if (!Core.isPremiumPurchased) {
-                if (billingManager != null && billingManager!!.billingClientResponseCode > BILLING_MANAGER_NOT_INITIALIZED) {
-                    billingManager?.initiatePurchaseFlow(Core.PREMIUM_SKU_ID, BillingClient.SkuType.INAPP)
-
-                    Answers.getInstance().logAddToCart(
-                        AddToCartEvent()
-                            .putItemPrice(PRICE)
-                            .putCurrency(USD)
-                            .putItemName("Premium")
-                            .putItemType("In-App Purchases")
-                            .putItemId(Core.PREMIUM_SKU_ID))
-                }
-            } else {
-                contentView?.longSnackbar(getString(R.string.premium_already_purchased))
-            }
+        findViewById<Button>(R.id.menuButton).setOnClickListener {
+            MenuBottomSheet().show(supportFragmentManager, MenuBottomSheet.TAG)
         }
 
         Core.sharedPreferences = getSharedPreferences(Core.APP_TAG, Context.MODE_PRIVATE)

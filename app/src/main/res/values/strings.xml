@@ -9,14 +9,28 @@
         • включите клавіатуру съ названіемъ Ижица
     </string>
     <string name="info_text">
-        Клавіатура содержитъ ​дополнительныя​ 4 буквы дореформенной орѳографіи: ять (ѣ), фиту (ѳ), и-десятичное (і) и, собственно, ижицу (ѵ).\nБуквы ь, е, ять и и-десятичное позволяютъ печатать еръ, ё, фиту и ижицу соотвѣтственно быстрымъ двойнымъ нажатіемъ или же долгимъ удержаніемъ.
+        Клавіатура содержитъ ​дополнительныя​ 4 буквы дореформенной орѳографіи: ять (ѣ), фиту (ѳ), и-десятичное (і) и, собственно, ижицу (ѵ).\nБуквы \'ь\', \'е\', \'ф\' и \'и\' позволяютъ печатать еръ; ять, ё; фиту; и-десятичное и ижицу соотвѣтственно быстрымъ двойнымъ нажатіемъ или же долгимъ удержаніемъ.
     </string>
+    <string name="menu_button">Меню</string>
     <string name="rate_button">Оцѣнить въ Google Play</string>
     <string name="share_button">Подѣлиться</string>
     <string name="other_apps_button">Другiя приложенiя</string>
-    <string name="translator_button">Дореволюціонный переводчикъ</string>
+    <string name="translator_button">Переводчикъ въ Google Play</string>
     <string name="donate_button">Поддержать автора</string>
-    <string name="copyright">© Дмитрiй Канунниковъ, в1.0.0</string>
+    <string name="copyright">© Дмитрiй Канунниковъ, в1.1.1</string>
     <string name="premium_purchased">Вашъ платёжъ полученъ. Премногая благодарность за поддержку!</string>
     <string name="premium_already_purchased">Вы уже поддержали автора. Достаточно одного раза. Сердечное спасибо!</string>
+
+
+    <!-- Symbols that are commonly considered word separators in this language -->
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+
+    <!-- Labels on soft keys -->
+    <string name="label_go_key">Вперёдъ</string>
+    <string name="label_next_key">Далѣе</string>
+    <string name="label_send_key">Отправить</string>
+
+    <!-- Labels for subtype -->
+    <string name="label_subtype_generic">%s</string>
+    <string name="label_subtype_en_GB">English (GB)</string>
 </resources>
