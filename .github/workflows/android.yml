@@ -34,7 +34,7 @@ jobs:
         working-directory: ./workspace
         run: |
           if [ ! -f "gradlew" ]; then gradle wrapper; fi
-          gradlew ${{ github.event.inputs.taskName }} --stacktrace
+          gradle ${{ github.event.inputs.taskName }} --stacktrace
 
       - name: Upload the APK artifact with 1 day retention
         uses: actions/upload-artifact@v3
